@@ -1,0 +1,272 @@
+React JS interview questions -- https://github.com/sudheerj/reactjs-interview-questions
+
+React Js Tutorials
+
+Note: The name of a component should always start with a capital letter. This is done to differentiate a component tag with html tags.
+
+
+1. React js Introduction
+
+-- React is not a framework. It is just a library developed by Facebook 
+-- React is a declarative, efficient, and flexible JavaScript library for building user interfaces. It’s ‘V’ in MVC. ReactJS is an open-source, component-based front end library responsible only for the view layer of the application. It is maintained by Facebook.
+
+-- It designs simple views for each state in your application, and React will efficiently update and render just the right component when your data changes. 
+
+
+-- React implements a virtual DOM that is basically a DOM tree representation in Javascript. So when it needs to read or write to the DOM, it will use the virtual representation of it. Then the virtual DOM will try to find the most efficient way to update the browser’s DOM.
+
+-----------------------------------------------------------------------------------
+
+2. Setting up Development Environment
+
+Step 1: Install NodeJS
+Step 2: Setting up React Boilerplate. We will install the boilerplate globally
+		-- npm install -g create-react-app
+Step 3: Create a react app
+		-- create-react-app myapp
+Step 4: Start the development server
+		-- npm start				
+
+----------------------------------------------------------------------------------------------------------------------------
+	ReactJS | Fragments
+
+-- we make use of render method inside a component whenever we want to render something to the screen. We may render a single element or multiple elements, though rendering multiple elements will require a ‘div’ tag around the content as the render method will only render a single root node inside it at a time.	
+
+-- in React 16.2 version, Fragments were introduced and we use them instead of the extraneous ‘div’ tag.
+
+-- this is used to create a parent node for render the html in render function otherwise we have to create a not required parent div element or tag
+
+// simple rendering with fragments 
+class Columns extends React.Component { 
+render() { 
+	return ( 
+	<React.Fragment> 
+		<h2>Hello</h2> 
+		<p>How you doin'?</p> 
+	</React.Fragment> 
+	); 
+} 
+} 
+
+// simple rendering with short syntax 
+class Columns extends React.Component { 
+  render() { 
+    return ( 
+      <>  
+        <h2>Hello</h2> 
+        <p>How you doin'?</p> 
+      </> 
+    ); 
+  } 
+} 
+
+----------------------------------------------------------------------------------------------------------------------------------
+
+		ReactJS | Components	
+
+-- A Component is one of the core building blocks of React. In other words, we can say that every application you will develop in React will be made up of pieces called components. Components make the task of building UIs much easier. You can see a UI broken down into multiple individual pieces called components and work on them independently and merge them all in a parent component which will be your final UI.
+
+TWO TYPES
+
+a) Functional component (stateless component)	
+
+	function Democomponent()
+	{
+	    return <h1>Welcome Message!</h1>;
+	}
+
+b)Class component (statefull component)
+
+	class Democomponent extends React.Component
+	{
+	    render(){
+	          return <h1>Welcome Message!</h1>;
+	    }
+	}
+
+-----------------------------------------------------------------------------------------------------------------
+
+		Lifecycle of Components
+
+1. Initialization
+
+	constructor(props) 
+    {    
+        // Calling the constructor of  
+        // Parent Class React.Component 
+        super(props);            
+        // Setting the initial state 
+        this.state = { date : new Date() };  
+    } 
+
+2. Mounting - Mounting is the stage of rendering the JSX returned by the render method itself.
+
+	componentWillMount() 
+    { 
+        console.log("componentWillMount()"); 
+    } 
+  
+    componentDidMount() 
+    { 
+        console.log("componentDidMount()"); 
+    } 
+
+3. Updation
+
+	componentWillRecieveProps(newProps) 
+	{ 
+	    if (this.props !== newProps) { 
+	        console.log(" New Props have been assigned "); 
+	        // Use this.setState() to rerender the page. 
+	    } 
+	}     
+
+	-- setState() 
+
+ 	shouldComponentUpdate(nextProps, nextState) 
+    { 
+        console.log("shouldComponentUpdate()"); 
+        return true; 
+    } 
+  
+    componentWillUpdate() 
+    { 
+        console.log("componentWillUpdate()"); 
+    } 
+  
+    componentDidUpdate() 
+    { 
+        console.log("componentDidUpdate()"); 
+    } 
+
+4. Unmounting
+
+	componentWillUnmount() --  This function is invoked before the component is finally unmounted from the DOM i.e. this function gets invoked once before the component is removed from the page and this denotes the end of the lifecycle.
+
+------------------------------------------------------------------------------------------------
+
+		React Virtual DOM	
+
+-- In React, Virtual DOM exists which is like a lightweight copy of the actual DOM. So for every object that exists in the original DOM there is an object for that in React Virtual DOM. It is exactly the same, but it does not have the power to directly change the layout of the document. Manipulating DOM is slow, but manipulating Virtual DOM is fast as nothing gets drawn on the screen.
+
+-- Each time we change something in our JSX file, all the objects that are there in the virtual DOM gets updated. Though it may sound that it is ineffective but the cost is not much significant as updating the virtual DOM doesn’t take much time. React maintains two Virtual DOM at each time, one contains the updated Virtual DOM and one which is just the pre-update version of this updated Virtual DOM. Now it compares the pre-update version with the updated Virtual DOM and figures out what exactly has changed in the DOM. This process is known as ‘diffing’. Once React finds out what exactly has changed then it updated those objects only, on real DOM. This significantly improves the performance and is the main reason why Virtual DOM is much loved by developers all around.		
+
+----------------------------------------------------------------------------------------
+
+		ReactJS | Props
+
+-- React allows us to pass information to a Component using something called props (stands for properties). Props are basically kind of global variable or object. 
+
+Passing -- <DemoComponent sampleProp = "Hello Prop" />	
+
+Accessing props --  	this.props.propName; //this.props.sampleProp; 
+
+bind props -- {this.props.propName} -- bind using singlr curly braces
+
+###  Define defaultProps
+
+	// ExampleClass is a component Component 
+	ExampleClass.defaultProps = { 
+	    title: "GeeksforGeeks"
+	} 
+-----------------------------------------------------------------------------------------------------------------------------
+
+		propTypes in React
+
+-- We can use the propType for validating any data we are receiving from props. But before using it we will have to import it
+	
+	import PropTypes from 'prop-types';
+
+-- Below syntax shows how to use propTypes:
+
+	ComponentClassName.propTypes{    
+	    propName1 : PropTypes.string,
+	    propName2 : PropTypes.bool,
+	    propName3 : PropTypes.array,
+	    .
+	    .
+	    propNamen : PropTypes.anyOtherType
+	}	
+
+------------------------------------------------------------------------------------------------------------------------------------
+		ReactJS | State in React
+
+-- The state is an instance of React Component Class can be defined as an object of a set of observable properties that control the behaviour of the component. 
+-- In other words, the State of a component is an object that holds some information that may change over the lifetime of the component.		
+
+	Class MyClass extends React.Component 
+	{ 
+		constructor(props) 
+		{ 
+			super(props); 
+			this.state = { attribute : "value" }; 
+		} 
+	} 
+
+-- update state
+
+	this.setState({attribute: "new-value"});
+
+-------------------------------------------------------------------------------------------------------------------------------------------
+		Difference of Props and State.
+
+1. Props are immutable i.e. once set the props cannot be changed, while State is an observable object that is to be used to hold data that may change over time and to control the behavior after each change.
+2. States can only be used in Class Components while Props don’t have this limitation.
+3. While Props are set by the parent component, State is generally updated by event handlers. 
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------
+		ReactJS | State vs props
+State : --
+-- A state is a variable which exists inside a component, that cannot be accessed and modified outside the component and can only be used inside the component. Works very similarly to a variable that is declared inside a function that cannot be accessed outside the scope of the function in normal javascript.
+
+-- the state is mutable in nature, and should not be accessed from child components.		
+
+// component 
+	class FakeComponent extends React.component{ 
+	state = { 
+		name : 'Mukul'; 
+	} 
+	render(){ 
+		return <div>Hello {this.state.name}</div> 
+	} 
+	} 
+	// simple js function 
+	const FakeFunction = () => { 
+	let name = 'Mukul'; 
+	console.log(`Hey ${name}`); 
+	} 
+
+-- Props
+-- We know that components in React are used again and again in the UI, but we don’t normally render the same component with the same data. Sometimes we need to change the content inside a component. Props come to play in these cases, as they are passed into the component and the user.
+-- Props are immutable.
+
+// component 
+	class FakeComponent extends React.component{ 
+	render(){ 
+		return <div>Hello {this.props.name}</div> 
+		} 
+	} 
+	// passing the props 
+	<FakeComponent name='Mukul' /> 
+	<FakeComponent name='Mayank' /> 
+
+----------------------------------------------------------------------------------------------------------------------------------------	
+
+	ReactJS | Refs
+
+-- Refs are a function provided by React to access the DOM element and the React element that you might have created on your own. They are used in cases where we want to change the value of a child component, without making use of props and all. They also provide us with good functionality as we can use callbacks with them.
+
+	a) When to use refs
+
+-- Helpful when using third party libraries.
+-- Helpful in animations.
+-- When not to use refs
+
+	b) When not to use refs
+
+-- Should not be used with functional components because they dont have instances.
+-- Not to be used on things that can be done declaritvely.	
+
+---------------------------------------------------------------------------------------------------------------------
+		
