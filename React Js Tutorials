@@ -1,10 +1,66 @@
-React JS interview questions -- https://github.com/sudheerj/reactjs-interview-questions
+Company 
+--------------------
 
-React Js Tutorials
+1.) Innopad Solution -- Friday -- 21/06 -- evening 5.30 pm Telephonic (Ahemdabad) -- (confirm) -- 
+	--  saturday 22/06 -- practical round -- 3 hour -- call timing -- after 12 pm
+
+-------------------------------------------------------------------------------------------------------------
+
+2.) Tech radius -- Friday -- 21/06 -- 9 am (confirm)------- done
+
+-------------------------------------------------------------------------------------------------------------
+
+3.) Thrymr software -- saturday -- 22/06 -- 10 am (confirm)  (cancel by me)
+
+----------------------------------------------------------------------------------------------------------
+4.) Evozone -- Monday -- 24/06 -- 10 am (confirm)
+
+-----------------------------------------------------------------------------------------------------------
+5.) Auriga IT -- Monday -- 24/06 -- 12 pm (confirm)
+
+--------------------------------------------------------------------------------------------------------------
+
+6.) Tech Huz -- monday --- 24/06 -- 5.30 pm Telephonic (Ahemdabad) -- (confirm)
+
+-------------------------------------------------------------------------------------------------------------------
+
+7.) I View Labs --- Ahemdabad Company -- Assignment -- time 3 days -- 21/06 start and end date 23/06 --- (confirm)
+
+-------------------------------------------------------------------------------------------------------------------
+
+8.) Digidoers pvt ltd -- Tuesday -- 25/06 -- 10 am
+
+------------------------------------------------------------------------------------------------------------------------
+
+----------------------------------------------------------------------------
+resumes@aryavratinfotech.com   ---- Aryavrat ---
+hr@digidoers.com --- Digidoers pvt ltd ----D
+hr@survinitsolutions.com -- survin it solutions  ---D
+hr@sunarctechnologies.com -- sun arc  --- 
+hr@pebibits.com -- pebibits ---
+hr@advocosoft.com --- advocosoft --
+nextstepassociate@gmail.com --  next step -- D
+
+madhuri.chhatbar@globalpricing.com -- D
+
+----------------------------------------------------------------------------------------------------------
+*** -- React JS interview questions -- https://github.com/sudheerj/reactjs-interview-questions
+
+** -- Redux js best documentation ---
+
+https://daveceddia.com/redux-tutorial/
+https://www.valentinog.com/blog/redux/
+https://redux.js.org/basics/basic-tutorial
+https://thinkster.io/tutorials/create-react-app
+
+-----------------------------------------------------------------------------------------------------------------------------------------
+
+React Js Tutorials --> 
+-------------------
 
 Note: The name of a component should always start with a capital letter. This is done to differentiate a component tag with html tags.
 
-
+--------------------------------------------------------------------------------------------------------------------------------------
 1. React js Introduction
 
 -- React is not a framework. It is just a library developed by Facebook 
@@ -15,7 +71,7 @@ Note: The name of a component should always start with a capital letter. This is
 
 -- React implements a virtual DOM that is basically a DOM tree representation in Javascript. So when it needs to read or write to the DOM, it will use the virtual representation of it. Then the virtual DOM will try to find the most efficient way to update the browser’s DOM.
 
------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------------------
 
 2. Setting up Development Environment
 
