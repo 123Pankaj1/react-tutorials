@@ -32,6 +32,7 @@ Company
 
 ------------------------------------------------------------------------------------------------------------------------
 
+
 ----------------------------------------------------------------------------
 resumes@aryavratinfotech.com   ---- Aryavrat ---
 hr@digidoers.com --- Digidoers pvt ltd ----D
@@ -43,7 +44,27 @@ nextstepassociate@gmail.com --  next step -- D
 
 madhuri.chhatbar@globalpricing.com -- D
 
+----------------------------------------
+Job Description-  http://asticsinc.com/career.html
+company Website - http://asticsinc.com/
+
+Details --
+
+Strong proficiency in JavaScript, including DOM manipulation and the JavaScript object model
+Thorough understanding of React.js and its core principles
+Experience with popular React.js workflows (such as Flux or Redux)
+Knowledge of isomorphic React is a plus
+Familiarity with RESTful APIs
+Knowledge of modern authorization mechanisms, such as JSON Web Token
+Familiarity with modern front-end build pipelines and tools
+Experience with common front-end development tools such as Babel, Webpack, NPM, etc.
+Ability to understand business requirements and translate them into technical requirements
+A knack for benchmarking and optimization
+Familiarity with code versioning tools {{such as Git, SVN}}
+
 ----------------------------------------------------------------------------------------------------------
+			--Interview Questions--
+
 *** -- React JS interview questions -- https://github.com/sudheerj/reactjs-interview-questions
 
 ** -- Redux js best documentation ---
@@ -52,6 +73,19 @@ https://daveceddia.com/redux-tutorial/
 https://www.valentinog.com/blog/redux/
 https://redux.js.org/basics/basic-tutorial
 https://thinkster.io/tutorials/create-react-app
+
+--- React router
+ https://codeburst.io/getting-started-with-react-router-5c978f70df91    --------- best
+ https://blog.pshrmn.com/simple-react-router-v4-tutorial/
+
+-- programing questions
+
+https://www.includehelp.com/c-programs/c-program-to-print-stars-in-series-pyramid-using-looping.aspx
+http://scanftree.com/programs/c/programs-to-print-pyramid-patterns-in-c-part-1/
+https://www.programiz.com/c-programming/examples/pyramid-pattern
+https://www.programmingsimplified.com/c-program-print-stars-pyramid
+
+http://cbasicprogram.blogspot.com/2012/04/number-patterns.html   --------  best
 
 -----------------------------------------------------------------------------------------------------------------------------------------
 
