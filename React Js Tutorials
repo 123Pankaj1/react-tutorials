@@ -1,3 +1,35 @@
+-- Microsoft states that its latest version of JScript is the first implementation of the ECMAScript standard. The official standard, ECMA-262, was developed under the auspices of the European Computer Manufacturers Association (ECMA).
+
+-- Brendan Eich (/ˈaɪk/; born July 4, 1961) is an American technologist and creator of the JavaScript programming language. He co-founded the Mozilla project, the Mozilla Foundation and the Mozilla Corporation, and served as the Mozilla Corporation's chief technical officer and briefly, as its chief executive officer.
+
+-- JavaScript was created in May 1995 by Brendan Eich while at Netscape, reportedly in only 10 days. It was originally named Mocha, a name chosen by Netscape founder Marc Andreessen, but was renamed four months later to LiveScript. At that time, Sun Microsystems owned the trademark for JavaScript.
+
+-------------------------------------------------------------------------
+
+Javascript Programming Questions
+
+-- https://www.geeksforgeeks.org/tag/javascript-string/
+
+-- https://www.geeksforgeeks.org/tag/javascript-array/
+
+-- https://www.geeksforgeeks.org/tag/javascript-object/
+
+
+RxJs --
+
+-- https://www.techiediaries.com/angular-rxjs-tutorial/
+-- https://www.concretepage.com/angular/angular-rxjs-tap
+
+https://alligator.io/js/async-functions/
+https://alligator.io/js/object-array-destructuring-es2015/
+https://javascript.info/async-await
+
+http://www.jiodev.com/angular/learn-rxjs/debounce
+https://brianflove.com/2018/03/21/master-rxjs-operators/
+
+--------------------
+
+----------------------------------------
 ----------------------------------------------------------------------------------------------------------
 			--Interview Questions--
 
