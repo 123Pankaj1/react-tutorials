@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Screenshot Demo</title>
+   <!--  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script> -->
+    <!-- <script src="https://files.codepedia.info/files/uploads/iScripts/html2canvas.js"></script> -->
+    <script src="html2canvas.js"></script>
+</head>
+
+<body>
+    <center>
+        <h2>
+            This is Screenshot Demo.
+        </h2>
+        <div id="mainDiv">
+            <select>
+                <option value="volvo">Volvo</option>
+                <option value="saab">Saab</option>
+                <option value="mercedes">Mercedes</option>
+                <option value="audi">Audi</option>
+            </select> <br><br> <br>
+            
+            <input type="checkbox" name="vehicle1" value="Bike"> I have a bike<br>
+            <input type="checkbox" name="vehicle2" value="Car"> I have a car<br>
+            <input type="checkbox" name="vehicle3" value="Boat" checked> I have a boat<br>
+            <h2>
+                This is dummy content.
+            </h2>
+            <p>Please select your gender:</p>
+            <input type="radio" name="gender" value="male"> Male<br>
+            <input type="radio" name="gender" value="female"> Female<br>
+            <input type="radio" name="gender" value="other"> Other<br>
+            <p>Please select your age:</p>
+            <input type="radio" name="age" value="30"> 0 - 30<br>
+            <input type="radio" name="age" value="60"> 31 - 60<br>
+            <input type="radio" name="age" value="100"> 61 - 100<br>
+            <p style="color: red;">
+                demo content this is only for testing purpose.
+            </p>
+            <p style="color: #3e4b51;">
+                we are testing this only for demo.
+            </p>
+        </div>
+        <button id="screenshot_demo" onclick="takeScreenshot()">Screen Shot</button><br />
+        <script>
+        function takeScreenshot() {
+            html2canvas(document.body).then(function(canvas) {
+                var imgageData = canvas.toDataURL("image/png");
+                var newData = imgageData.replace(/^data:image\/png/, "data:application/octet-stream");
+                var img = document.createElement('img');
+                img.src = newData;
+                var a = document.createElement('a');
+                a.setAttribute("download", "screenshot.png");
+                a.setAttribute("href", newData);
+                a.appendChild(img);
+                a.click();
+            },function(err){
+              console.log(err);
+              alert(err)
+              console.error("error while taking screenshot");
+            });
+        }
+        </script>
+    </center>
+</body>
+
+</html>
